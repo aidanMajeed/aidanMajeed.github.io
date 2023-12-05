@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab10c: Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Trebuchet MS, sans-serif;
+	        background: linear-gradient(to right, #ba1894, #ff2d55);
+        }
+
+        header {
+            
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 45px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>{{ head }}</h1>
+            <p><a href='https://v2.vuejs.org/v2/guide/'>Vue 2 Documentation</a></p>
+            <p><a href='https://www.jsdelivr.com/package/npm/vue'>CDN Invocation Source</a></p>
+
+        </header>
+        <main>
+            <p>{{ description }}</p>
+            <p>{{ description2 }}</p>
+            <p>{{ description3}}</p>
+            <p>{{ description4 }}</p>
+            <p>{{ description5 }}</p>
+        </main>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                head: 'Problem 3: Vue Framework',
+                description: 'Hello! I made this webpage using Vue, a Javascript framework.',
+                description2: 'To install Vue, it was a relatively easy process, as I simply used a CDN Invocation from jsDelivr',
+                description3: 'To create this website, I used the script tag to embed Javascript code. Then i created a new instance of Vue with new Vue({}), bounded this instance to the ID #app using el (element) which mounts the ID and manages the content inside of it. Furthermore, I wrote my descriptions in data object. This object contains properties and their initial values, which in this case are my descriptions.',
+                description4: 'I faced two particular difficulties, the first one was the difference in versions 3 and 2 of Vue. At first I decided to use Vue 3, however I found the process of creating vue instances, mounting, and the overall syntax was much more complicated than Vue 2, so I decided to use that.',
+                description5: 'My second problem was syntax. Although Vue 2s syntax was much less complicated than Vue 3s, I still had some difficulties with creatiing messages and calling them in HTML. Looking up some documentation was really helpful and solved most of my issues.',
+
+            },
+        });
+    </script>
+</body>
+</html>
